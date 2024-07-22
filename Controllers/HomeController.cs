@@ -12,12 +12,18 @@ namespace LabMVC2.Controllers
         {
             _logger = logger;
         }
+        
+        // ViewData 寫法1
+        [ViewData]
+        public string tel { get; set; }
+        public string email { get; set; }
 
         public IActionResult Index()
         {
+            // ViewData 寫法2
             ViewData["addr"] = "我家地址";
-            ViewData["tel"] = "我的電話";
-            ViewData["email"] = "我的email";
+            tel = "我的電話";
+            email= "我的email";
             return View();
         }
 
