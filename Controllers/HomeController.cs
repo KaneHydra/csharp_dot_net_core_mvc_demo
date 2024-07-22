@@ -15,6 +15,9 @@ namespace LabMVC2.Controllers
 
         public IActionResult Index()
         {
+            ViewData["addr"] = "我家地址";
+            ViewData["tel"] = "我的電話";
+            ViewData["email"] = "我的email";
             return View();
         }
 
